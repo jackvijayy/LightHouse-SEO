@@ -17,7 +17,9 @@
 
 - [Introduction](#introduction)
 - [How to use](#Howtouse)
-- [main](#main)
+
+- [performance](#Performance)
+  -[First-Contentful paint](fcp)
 
 # introduction
 
@@ -27,9 +29,18 @@ Lighthouse is an open-source tool created by Google. As Google is a reputable co
 Using Lighthouse through Chrome is the easiest method to measure your website’s performance. First, open any web page that you’d like to measure
 Next, open the devtools either by clicking shift + control + J or F12 on Windows/Linux, or option + command + J or fn + F12 on macOS.
 
-
 <p align="center">
   <img src="https://github.com/user-attachments/assets/208ced73-253f-4cce-bc1d-cbad5dbf3a8d" height="200" width="400"/>
 </p>
+
+#Performance
+
+<h1>Performance</h1>
+Performance focuses on how to make your website load faster. We’ll go over the six important metrics for Performance, what they each entail and how to achieve a better score in each of them.
+
+  # fcp
+  <h2>First Contentful Paint</h2>
+   The first contentful paint (FCP) is measured from the moment the user navigates to the web page. It measures how long it takes for the first piece of DOM content to load. The DOM content can include images, 
+  non-white canvas elements, and SVG elements.
 
 
