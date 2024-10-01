@@ -17,8 +17,6 @@
 
 - [Introduction](#introduction)
 - [How to use](#Howtouse)
-
-
 - [performance](#Performance)
   - [First-Contentful-paint](#First-Contentful-Paint)
   - [Bold](#bold)
@@ -61,25 +59,26 @@ One factor that can affect your website’s FCP time is fonts. Fonts can take a 
 
 <details>
   <summary>Minify JavaScript</summary>
-
-   Minify the JavaScript and CSS files being used on the page, reducing its size so that loading these assets doesn’t take as long. This depends on what framework or programming language you’re using, but almost 
+  </br>
+  <p>
+  Minify the JavaScript and CSS files being used on the page, reducing its size so that loading these assets doesn’t take as long. This depends on what framework or programming language you’re using, but almost 
   all of them have a way of doing that. You can check out simple tips on how to minify JavaScript when using various popular frameworks on the web.dev site.
+  </p> 
 </details>
 <details>
   <summary>Remove Unused Css</summary>
+    </br>
+  <p>
+   As the amount of CSS grows in size, reducing your CSS files by removing unnecessary rules and properties that aren’t being used on a page can make it load faster. Again, there are different ways to do that based on the framework you’re using. However, you can use Chrome’s developer tools to view unused CSS in the Coverage tab. Using frameworks like Tailwind CSS — which use the tree-shaking mechanism to reduce your CSS styles instead of inflating your website with many styles you’ll probably never use — can help in making your website load faster.
+  </p> 
 </details>
 <details>
-  <summary>Reduce Server Response Time</summary>
+  <summary>Reduced Response Time</summary>
+    </br>
+  <p>
+  This can be done either by performing the logic required for the page to load using asynchronous requests, caching the data the server is frequently using, or optimizing your server code to get the required result faster.
+  </p> 
 </details>
-<details>
-  <summary>javaScript Load</summary>
-        ```javascript
-  <script src="myScript.js" defer></script>
-  ```
-  
-</details>
-
-
 
  
 
