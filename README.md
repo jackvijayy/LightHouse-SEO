@@ -19,7 +19,8 @@
 - [How to use](#Howtouse)
 - [performance](#Performance)
   - [First-Contentful-paint](#First-Contentful-Paint)
-  - [Bold](#bold)
+  - [Total BlockinG Time](#Total-Blocking-Time)
+  - [Largest-contenful-paint](#Largest-contenful-paint)
   
 
 # introduction
@@ -55,30 +56,41 @@ One factor that can affect your website’s FCP time is fonts. Fonts can take a 
     font-display: swap;
 }
 ```
-<h2>Best Practice</h2>
+<h2>How To Improve</h2>
 
-<details>
-  <summary>Minify JavaScript</summary>
-  </br>
-  <p>
-  Minify the JavaScript and CSS files being used on the page, reducing its size so that loading these assets doesn’t take as long. This depends on what framework or programming language you’re using, but almost 
-  all of them have a way of doing that. You can check out simple tips on how to minify JavaScript when using various popular frameworks on the web.dev site.
-  </p> 
-</details>
-<details>
-  <summary>Remove Unused Css</summary>
-    </br>
-  <p>
-   As the amount of CSS grows in size, reducing your CSS files by removing unnecessary rules and properties that aren’t being used on a page can make it load faster. Again, there are different ways to do that based on the framework you’re using. However, you can use Chrome’s developer tools to view unused CSS in the Coverage tab. Using frameworks like Tailwind CSS — which use the tree-shaking mechanism to reduce your CSS styles instead of inflating your website with many styles you’ll probably never use — can help in making your website load faster.
-  </p> 
-</details>
-<details>
-  <summary>Reduced Response Time</summary>
-    </br>
-  <p>
-  This can be done either by performing the logic required for the page to load using asynchronous requests, caching the data the server is frequently using, or optimizing your server code to get the required result faster.
-  </p> 
-</details>
+  * Minify JavaScript
+  * Remove Unused Css
+  * Reduced Response Time
+  * Eliminate render-blocking resources
+  * Reduce server response times (TTFB)
+  * Avoid an excessive DOM size
+  * Avoid multiple page redirects
+   
+
+# Total-Blocking-Time
+
+* The Total Blocking Time (TBT) metric measures the total amount of time after First Contentful Paint (FCP) where the main thread was blocked for long enough to prevent input responsiveness.
+By default, Lighthouse stops monitoring TBT after Time to Interactive (TTI), as do some other lab tools that measure page load.
+
+![image](https://github.com/user-attachments/assets/4ce5146e-196d-432a-80d8-14d225052976)
+The timeline depicted in the preceding image has five tasks, three of which are Long Tasks because their duration exceeds 50 milliseconds. The next diagram shows the blocking time for each of the long tasks:
+![image](https://github.com/user-attachments/assets/9a4c3c64-d5ce-442b-96b1-ee05c619d5b1)
+
+ * In the first case, three, 51 ms tasks would have a TBT of 3 milliseconds. Whereas a single, 10-second long tasks would have a TBT of 9950 milliseconds. The larger TBT value in the second case quantifies the worse experience.
+ * To provide a good user experience, sites should strive to have a Total Blocking Time of less than 200 milliseconds when tested on average mobile hardware.
+
+<h2>How To improve It</h2>
+
+* Reduce the impact of third-party code
+* Reduce JavaScript execution time
+* Minimize main thread work
+* Keep request counts low and transfer sizes small
+
+
+# Largest-contenful-paint
+
+
+
 
  
 
