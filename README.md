@@ -21,6 +21,7 @@
   - [First-Contentful-paint](#First-Contentful-Paint)
   - [Total BlockinG Time](#Total-Blocking-Time)
   - [Largest-contenful-paint](#Largest-contenful-paint)
+  - Cumulative-Layout-Shift-(CLS)(#Cumulative-Layout-Shift-(CLS))
   
 
 # introduction
@@ -89,6 +90,38 @@ The timeline depicted in the preceding image has five tasks, three of which are 
 
 # Largest-contenful-paint
 
+Largest Contentful Paint (LCP) is one of the three Core Web Vitals metrics, and it represents how quickly the main content of a web page is loaded. Specifically, LCP measures the time from when the user initiates loading the page until the largest image or text block is rendered within the viewport.
+
+![image](https://github.com/user-attachments/assets/51e79d3b-8003-4e54-84c8-64dded0bb712)
+
+
+![image](https://github.com/user-attachments/assets/ad5649b2-8e73-4bf1-a13a-20424b687373)
+
+<h2>How To improve It</h2>
+
+* Time to first byte (TTFB)
+* Load delay
+* Load time
+* Render delay
+
+# Cumulative-Layout-Shift-(CLS)
+
+CLS is a measure of the largest burst of layout shift scores for every unexpected layout shift that occurs during the entire lifecycle of a page.
+
+A layout shift occurs any time a visible element changes its position from one rendered frame to the next. (Details on how individual layout shift scores are calculated are covered later in this guide.)
+
+![image](https://github.com/user-attachments/assets/f92ea888-5e08-412f-b4f2-6569784708c8)
+
+![image](https://github.com/user-attachments/assets/8cef08d1-6cac-46dd-b7ae-fec5dede6486)
+
+
+<h2>How To improve It</h2>
+
+* Specify Image Dimensions. With the rise of Responsive Web Design, CSS became the norm for resizing images, but this led to reflow issues as images loaded. ...
+* Preload Fonts
+* Reserve Space for Ad Layout Stability
+* Use CSS Transitions Instead of Animations
+* Leverage bfcache.
 
 
 
